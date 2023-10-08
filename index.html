@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h3>To Do List:</h3>
+		<ul>
+		    <li>Homework</li>
+		    <li>Walk Karel</li>
+		    <li>Make Dinner</li>
+		    <li>Clean Room</li>
+		</ul>
+		<script>
+		    // need to add a function that crosses off 
+            //Give each li item an eventListener
+            // need to use a style text-decoration line-through 
+            // the function should be able to un-cross out an item
+            //check if the li has the attribute line-through, if it does remove it. otherwise add the attribute. 
+               var liList = document.getElementsByTagName("li");
+               console.log(liList);
+                for(var i = 0; i < liList.length; i++){
+                    console.log(liList.length)
+                    liList[i].addEventListener("click", crossOff);
+                }
+                function crossOff() { 
+                    if(this.getAttribute("style") == "text-decoration: line-through"){ 
+                        this.removeAttribute("style")
+                    }else { 
+                        this.setAttribute("style", "text-decoration: line-through")
+                    }
+            }
+		    //Write function crossOff here.
+		</script>
+	</body>
+</html>
